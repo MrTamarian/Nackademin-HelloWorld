@@ -1,5 +1,5 @@
 name: Super-Linter
-
+run-name: Python Linter
 on: push
 
 jobs:
