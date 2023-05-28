@@ -1,0 +1,18 @@
+name: Super-Linter
+run-name: Python Linter
+on: push
+
+jobs:
+    super-lint:
+        name: Python Linter
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Run Python Linter
+              uses: super-linter/super-linter/slim@v5
+              env:
+                FILTER_REGEX_INCLUDE: \.py$
+                DEFAULT_BRANCH: main
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

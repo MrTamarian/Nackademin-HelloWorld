@@ -6,6 +6,6 @@ import "net/http"
 func (s server) helloHandler() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
-		w.Write([]byte("Hello, Universe!"))
+		w.Write([]byte("Hello, world!"))
 	})
 }
