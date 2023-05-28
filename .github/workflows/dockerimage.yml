@@ -1,4 +1,5 @@
-name: Create and publish a 
+name: Publish docker
+run-name: Publish docker
 
 on:
   push:
@@ -40,4 +41,3 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          
