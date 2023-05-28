@@ -1,10 +1,10 @@
 name: Go package
-run-name: Testing Go Package with ${{ github.actor }}s push request.
+run-name: Testing Go Package (dev branch only)
 on:
   push:
     branches:
       - dev
-      
+
 jobs:
   build:
 
