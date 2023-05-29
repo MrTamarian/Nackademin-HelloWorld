@@ -1,6 +1,12 @@
 name: Go package
 run-name: Testing Go Package with ${{ github.actor }}s push request.
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
